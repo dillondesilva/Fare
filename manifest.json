@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Fare",
+  "description": "Todo list tracker",
+  "version": "1",
+  "author": "Dillon de Silva",
+ "browser_action": {
+    "default_title": "Web extension"
+  },
+ "chrome_url_overrides" : {
+   "newtab": "new_tab.html"
+ },
+  "permissions": ["activeTab"]
+}

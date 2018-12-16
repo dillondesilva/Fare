@@ -1,0 +1,53 @@
+body {
+  background-image: url('background.png');
+  background-size: cover;
+  background-repeat:no-repeat;
+  color: #FFD662;
+  font-family: 'Lato', sans-serif;
+}
+
+
+h1 {
+  font-size: 6em;
+}
+
+li {
+  font-size: 1.5em;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h1, p {
+  color:  #FFD662;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  background-color: white;
+  color: #FFD662;
+  border-radius: 2.5px;
+  border: 1px solid black;
+}
+
+button:hover {
+  background-color: #FFD662;
+  color: white;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid black;
+  text-align: center
+}
