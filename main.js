@@ -21,15 +21,36 @@ function clear() {
   renderList();
 }
 
+function removeTask(id) {
+  console.log(id);
+  var element = document.getElementById(id);
+  element.parentElement.removeChild(element);
+
+  localStorage.removeItem(id);
+  renderList();
+}
+
 function renderList () {
   todoList.innerHTML = '';
   for (var item in localStorage) {
     if (localStorage.hasOwnProperty(item)) {
       var point = document.createElement("li")
       var node = document.createTextNode(item);
-      point.appendChild(node);
 
-      todoList.appendChild(point);
+      point.appendChild(node);
+      
+      var button = document.createElement("button");
+      node = document.createTextNode("Remove");
+
+      button.appendChild(node);
+      button.onclick = () => {removeTask(item)};
+
+      var div = document.createElement("div");
+      div.append(point);
+       
+      div.append(button);
+      div.setAttribute("id", item);
+      todoList.appendChild(div);
     }
  }
 
