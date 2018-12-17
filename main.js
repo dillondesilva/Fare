@@ -43,7 +43,8 @@ function renderList () {
       node = document.createTextNode("Remove");
 
       button.appendChild(node);
-      button.onclick = () => {removeTask(item)};
+      button.setAttribute("id", item);
+      button.onclick = () => {removeTask(button.id)};
 
       var div = document.createElement("div");
       div.append(point);
