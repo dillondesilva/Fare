@@ -21,15 +21,15 @@ function clear() {
   renderList();
 }
 
-function removeTask(id) {
-  console.log(id);
-  var element = document.getElementById(id);
+function removeTask(element) {
+  console.log(element);
+  // var element = document.getElementById(id);
   element.parentElement.removeChild(element);
 
-  localStorage.removeItem(id);
-  renderList();
+  // localStorage.removeItem(id.id);
+  // renderList();
 }
-
+ 
 function renderList () {
   todoList.innerHTML = '';
   for (var item in localStorage) {
@@ -43,14 +43,15 @@ function renderList () {
       node = document.createTextNode("Remove");
 
       button.appendChild(node);
-      button.setAttribute("id", item);
-      button.onclick = () => {removeTask(button.id)};
+      button.setAttribute("id", item)
 
       var div = document.createElement("div");
       div.append(point);
        
       div.append(button);
       div.setAttribute("id", item);
+
+      button.onclick = () => {removeTask(div)};
       todoList.appendChild(div);
     }
  }
